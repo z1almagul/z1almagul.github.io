@@ -1,66 +1,233 @@
 *{
     margin: 0;
-    border-radius: 5px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    height: 100%;
 }
 
 body{
-    background-color: lavender;
-    font-family: Sans-serif;
+    background-color: rgb(0, 33, 71);
     text-align: center;
-    font-size: 24px;
 }
 
-header{
-    font-weight: 800;
-    background-color: red;
-    padding: 0 20px;
-    height: 20%;
-    letter-spacing: 0.5px;
-    margin: 0 25% 10% 25%;
-    max-height: 20%;
-}
-
-div{
-    background-color: skyblue;
-    margin: 10% 5% 10% 5%;
+#container{
+    background-color: rgb(94, 187, 227);
+    background-image: url("https://raw.githubusercontent.com/z1almagul/BerryPicks/main/assets/layer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    padding: 20px 10px;
-    max-height: 40%;
-    height: 40%;
+    flex: 1 0 auto;
+    flex-direction: column;
+    min-height: calc(100vh - 4.5rem);
 }
 
-input{
-    width: 90%;
-    max-width: 150px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid white;
-    background-color: lavender;
+#middle-matter{
+    max-width: 64rem;
+    width: 80%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -5.6rem;
+}
+
+#content{
+    background-color: transparent;
+    margin-top: 3rem;
+    text-align: center;
+    border-radius: 0.6rem;
+    margin: 0 2rem;
+}
+
+#header{
+    background-color: rgb(0, 33, 71);
+    padding: 1rem;
+    text-align: center;
+    min-height: 4rem;
+}
+
+#logo{
+    min-width: 12rem;
+    text-align: left;
+
+    float: none;
+    margin: 0 auto;
+    padding: 0.4rem 0 0 0;  
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0.5deg);
+        }
+         50% {
+        transform: rotate(-0.5deg);
+        }
+         100% {
+        transform: rotate(0.5deg);
+        }
+}
+
+@keyframes wiggle-big {
+    0% {
+   transform: rotate(1.5deg);
+   }
+    50% {
+   transform: rotate(-1.5deg);
+   }
+    100% {
+   transform: rotate(1.5deg);
+   }
+}
+
+img{
+    border: none;
+}
+
+#levels{
+    margin: 1rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 52rem;
+    justify-content: center;
+
+
+    border-radius: 0.6rem;
+    list-style: none;
+
+    background-color: white;
+}
+
+#content #levels li{
+    margin: 1rem;
+}
+
+#content #levels li a{
+    display: block;
+    max-width: 100%;
+}
+
+#content #levels li a img {
+	border: 1px solid #fff;
+	border-radius: 0.6rem;
+	box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+    max-width: 30rem;
+}
+
+#levels li a:hover{
+    animation: wiggle .5s ease-in-out infinite;
+    /*-webkit-transition: padding 0.5s; Safari*/
+    transition: padding 0.5s;
+}
+
+
+#content #levels li a img{
+    border-radius: 0.5rem;
+	border: 0.5rem #ccc solid;
+	margin: 0 auto;
+}
+
+/*write here the code to change the border color of each level image*/
+
+#content #levels li.b1 a img{
+    border-color: #d9861c;
+}
+
+#content #levels li.b2 a img{
+    border-color: rgb(53, 154, 195);
+}
+
+#content #levels li.b3 a img{
+    border-color: rgb(100, 92, 92);
 }
 
 a{
-    width: 90%;
-    max-width: 150px;
-    height: 100px;
-    object-fit: cover;
-    background-color: none;
+    text-decoration: none;
+
+    vertical-align: baseline;
+    text-align: left;
 }
 
-input:hover, a:hover{
-    background-color: aquamarine;
-    width:100%;
+a:-webkit-any-link{
+    color: -webkit-link;
+    cursor: pointer;
 }
 
-footer{
-    background-color: red;
-    border-radius: 0;
-    font-size: 18px;
-    margin: 10% 0 0 0;
-    padding: 10px 0 20px 0;
-    max-height: 10%;
+
+
+/*img[Attributes Style] {
+    width: 240px;
+    aspect-ratio: auto 240 / 56;
+    height: 56px;
+}*/
+
+#exercise{
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+
+li{
+    margin: 1rem;
+    display:list-item;
+    text-align: -webkit-match-parent;
+    border: 0;
+    list-style: none;
+}
+
+/*@media screen and (max-width: 780px) {
+    #middle_matter {
+        display: flex;
+        flex-direction: column;
+        position: inherit;
+        width: 98%;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 960px){
+    #middle_matter{
+        position: inherit;
+        width: 98%;
+        padding-top: 0;
+    }
+}*/
+
+#footer{
+    width: 100%;
+    flex: none;
+    color: white;
+    background-color: rgb(0, 33, 71);
+    padding: 1rem;
+    font-size: 0.8rem;
+    clear: both;
+    overflow: hidden;
+    text-align: left;
 }

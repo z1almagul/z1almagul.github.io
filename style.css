@@ -156,9 +156,9 @@ img{
     border-color: rgb(53, 154, 195);
 }
 
-#content #levels li.b3 a img{
+/*#content #levels li.b3 a img{
     border-color: rgb(100, 92, 92);
-}
+}*/
 
 #content #levels li.b4 a img{
     border-color: indianred;

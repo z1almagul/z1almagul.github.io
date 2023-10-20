@@ -160,6 +160,10 @@ img{
     border-color: rgb(100, 92, 92);
 }
 
+#content #levels li.b4 a img{
+    border-color: indianred;
+}
+
 a{
     text-decoration: none;
 
